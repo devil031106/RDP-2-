@@ -97,12 +97,13 @@ jobs:
               exit 1
           }
           Write-Host "TCP connectivity successful!"
+
       - name: Maintain Connection
-        run: 
+        run: |
           Write-Host "`n=== RDP ACCESS ==="
-          Write-Host "Address:$env:TAILSCALE_IP"
-          Write-Host "Username:RDP"
-          Write-Host "Password:$(echo $env:RDP_CREDS)"
+          Write-Host "Address: $env:TAILSCALE_IP"
+          Write-Host "Username: RDP"
+          Write-Host "Password: $(echo $env:RDP_CREDS)"
           Write-Host "==================`n"
           
           # Keep runner active indefinitely (or until manually cancelled)
