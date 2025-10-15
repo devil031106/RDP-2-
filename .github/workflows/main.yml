@@ -97,7 +97,6 @@ jobs:
               exit 1
           }
           Write-Host "TCP connectivity successful!"
-         
       - name: Maintain Connection
         run: 
           Write-Host "`n=== RDP ACCESS ==="
